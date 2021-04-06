@@ -4,20 +4,28 @@
 //
 //  Created by Countyfoot on 4/3/21.
 //
-//En este programa se observa como se manipulan los bits directamente para obtener resultados en terminos de optimización. NOTA: Es muy arriesgado realizar este tipo de operaciones.
+// En este programa miraremos los operadores de comparación.
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
 
 int main (int argc, char *argv[])
 {
-  int a = 6; // 110
-  int b = 4; // 100
+  bool flag = true;
 
-  int c = a & b; // c = 100 = 4
-  c = a | b; // c = 110 = 6
-  c = a ^ b; // c = 010 = 2
-  c = ~a;    // c = 001 = -7
-  c = a<<2;  // c = 11000 =
+  flag = (7 == 5); // false // 0
+  flag = (5 > 4); // true
+  flag = (3 != 5); // true
+  flag = (6 >= 6); // true
+  flag = (5 < 5); // false
+
+  int a = 2, b = 3, c = 4;
+  flag = ( a == 5 ); // false
+  flag = ( a*b >= c ); // true
+  flag = ( b+4 == a ); // false
+  flag = ( (b=2) == a ); // true
+
+  flag = (2 > 5) && (3 > 1); // false && true -- false
+  flag = (2 > 5) || (3 > 1); // false || true -- true
   return 0;
 }
